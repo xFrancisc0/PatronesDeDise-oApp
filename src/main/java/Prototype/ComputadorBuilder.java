@@ -1,6 +1,6 @@
 package Prototype;
 
-public class ComputadorBuilder implements ComputadorBuilderInterface{
+public class ComputadorBuilder implements IComputadorBuilder{
     private String Marca;
     private String Modelo;
     private String TipoDisco;
@@ -19,55 +19,55 @@ public class ComputadorBuilder implements ComputadorBuilderInterface{
         
     }
     
-    public ComputadorBuilderInterface setMarca(String Marca){
+    public IComputadorBuilder setMarca(String Marca){
         this.Marca = Marca;
         return this;
     }
-    public ComputadorBuilderInterface setModelo(String Modelo){
+    public IComputadorBuilder setModelo(String Modelo){
         this.Modelo = Modelo;
         return this;
     }
-    public ComputadorBuilderInterface setTipoDisco(String TipoDisco){
+    public IComputadorBuilder setTipoDisco(String TipoDisco){
         this.TipoDisco = TipoDisco;
         return this;
     }
-    public ComputadorBuilderInterface setTamanoDisco(String TamanoDisco){
+    public IComputadorBuilder setTamanoDisco(String TamanoDisco){
         this.TamanoDisco = TamanoDisco;
         return this;
     }
-    public ComputadorBuilderInterface setTipoRAM(String TipoRAM){
+    public IComputadorBuilder setTipoRAM(String TipoRAM){
         this.TipoRAM = TipoRAM;
         return this;
     }
-    public ComputadorBuilderInterface setTamanoRAM(String TamanoRAM){
+    public IComputadorBuilder setTamanoRAM(String TamanoRAM){
         this.TamanoRAM = TamanoRAM;
         return this;
     }
-    public ComputadorBuilderInterface setTipoCPU(String TipoCPU){
+    public IComputadorBuilder setTipoCPU(String TipoCPU){
         this.TipoCPU = TipoCPU;
         return this;
     }
-    public ComputadorBuilderInterface setModeloCPU(String ModeloCPU){
+    public IComputadorBuilder setModeloCPU(String ModeloCPU){
         this.ModeloCPU = ModeloCPU;
         return this;
     }
-    public ComputadorBuilderInterface setNumeroNucleos(String NumeroNucleos){
+    public IComputadorBuilder setNumeroNucleos(String NumeroNucleos){
         this.NumeroNucleos = NumeroNucleos;
         return this;
     }
-    public ComputadorBuilderInterface setGHerciosPorNucleo(String GHerciosPorNucleo){
+    public IComputadorBuilder setGHerciosPorNucleo(String GHerciosPorNucleo){
         this.GHerciosPorNucleo = GHerciosPorNucleo;
         return this;
     }
-    public ComputadorBuilderInterface setTipoGPU(String TipoGPU){
+    public IComputadorBuilder setTipoGPU(String TipoGPU){
         this.TipoGPU = TipoGPU;
         return this;
     }
-    public ComputadorBuilderInterface setModeloGPU(String ModeloGPU){
+    public IComputadorBuilder setModeloGPU(String ModeloGPU){
         this.ModeloGPU = ModeloGPU;
         return this;
     }
-    public ComputadorBuilderInterface setNumeroNucleosCuda(String NumeroNucleosCuda){
+    public IComputadorBuilder setNumeroNucleosCuda(String NumeroNucleosCuda){
         this.NumeroNucleosCuda = NumeroNucleosCuda;
         return this;
     }

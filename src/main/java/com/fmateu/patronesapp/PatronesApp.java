@@ -1,5 +1,7 @@
 package com.fmateu.patronesapp;
-import Builder.UsuarioBuilder; import Builder.Usuario;
+import Builder.UsuarioBuilder; 
+import Builder.Usuario;
+import static Factory.EnumPago.CRYPTO;
 import Singleton.SingletonClass;
 
 public class PatronesApp {
@@ -62,5 +64,15 @@ public class PatronesApp {
         System.out.println("Computador2 ModeloCPU: "+ Computador2.getModeloCPU());
         Domicilio.addComputador(Computador2);
         Domicilio.listarComputadores(); //Para transformar el arraylist en json, el pom.xml de maven le agrego <dependencies></dependencies, la libreria de Gson de google
+    
+    
+        
+        //Factory: Sirve para crear clases que heredan de una sola, evitandonos asi multiples if() if() if() if() if() en una unica funcion.
+        System.out.println("3.- Prototype: Si quisiera evitarme los if if if if if if if if masivos en una unica funcion, necesito factory");
+        System.out.println("Lo primero es crear una Interfaz padre, que las clases hijas la implementen y luego crear una clase factory");
+        System.out.println("Que dependiendo de que tipo de clase hija se requiera, se hace el if if if if if if en esta clase factory");
+        System.out.println("Y retorna una clase hija en particular");
+        Factory.PagoFactory pagoFactor = new Factory.PagoFactory();
+        pagoFactor.crearPago(Factory.EnumPago.CRYPTO);
     }
 }

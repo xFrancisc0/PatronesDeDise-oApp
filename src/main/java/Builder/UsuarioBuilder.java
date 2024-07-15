@@ -1,6 +1,6 @@
 package Builder;
 
-public class UsuarioBuilder implements UsuarioBuilderInterface{
+public class UsuarioBuilder implements IUsuarioBuilder{
     private String nombre;
     private String email;
     private int edad;
@@ -10,19 +10,19 @@ public class UsuarioBuilder implements UsuarioBuilderInterface{
     }
     
     @Override
-    public UsuarioBuilderInterface setNombre(String nombre) {
+    public IUsuarioBuilder setNombre(String nombre) {
         this.nombre = nombre;
         return this;
     }
 
     @Override
-    public UsuarioBuilderInterface setEmail(String email) {
+    public IUsuarioBuilder setEmail(String email) {
         this.email = email;
         return this;
     }
 
     @Override
-    public UsuarioBuilderInterface setEdad(int edad) {
+    public IUsuarioBuilder setEdad(int edad) {
         this.edad = edad;
         return this;
     }
